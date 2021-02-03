@@ -35,19 +35,19 @@ const { removeBackgroundFromImageFile } = require('remove.bg')
 const { ind } = require('./language')
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Admin Ainebot\n' 
-            + 'ORG: Pengembang AINEBOT;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=62895330379186:+62 895-3303-79186\n' 
+            + 'FN:Admin PutraBot\n' 
+            + 'ORG: Pengembang PUTRABOT;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=6281253534285:+62 812-5353-4285\n' 
             + 'END:VCARD'
-prefix = '#'
+prefix = '!'
 blocked = []   
-limitawal = 10
-memberlimit = 2
+limitawal = 7
+memberlimit = 3
 cr = '*AINEBOT THIS IS ALREADY VERIFIED*'
 
 /******** OWNER NUMBER**********/
-const ownerNumber = ["62895330379186@s.whatsapp.net"] 
-const pacarNumber = ["62895321438933@s.whatsapp.net"]
+const ownerNumber = ["6281253534285@s.whatsapp.net"] 
+const pacarNumber = ["6281253534285@s.whatsapp.net"]
 /************************************/
 
        
@@ -267,7 +267,15 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*Hallo* 👋 @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*\nSemoga betah ya di sini 😅\nJangan lupa intro @${num.split('@')[0]} 😅`
+				teks = `*Hallo* 👋 @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*\nSemoga betah ya di sini 😅\nJangan lupa intro ╭══════•›⸙ ━✪━ ⸙‹•═══════
+ │ 𒈞ℕ𝔼𝕎 𝕄𝔼𝕄𝔹𝔼ℝ 𝕀ℕ𝕋ℝ𝕆𒈞
+ ¦   by *OWNERBOT* :ไفتر علف ๅื
+      Wa.me//6281253534285 •°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•
+ │ Nama  :  
+ │ Umur   :  
+ ¦  Status : 
+ |  Askot  : 
+ ╰═══════⸙ ━✪━ ⸙════════ @${num.split('@')[0]} 😅`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				} else if (anu.action == 'remove') {
@@ -277,7 +285,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*Titip salam yah kak* @${num.split('@')[0]}\n*I will miss you* 🤭`
+				teks = `*Titip salam yah kak,aing nitip gorengan eak:v* @${num.split('@')[0]}\n*I will miss you* 🤭`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -698,7 +706,7 @@ client.on('group-participants-update', async (anu) => {
 				ct = body.slice(7)
 				reply(ind.wait())
 				ct = await getBuffer(`https://api.zeks.xyz/api/nulis?text=${ct}&apikey=apivinz`)
-				client.sendMessage(from, ct, image, {caption: 'Nih kak udah jadi..', quoted: mek})
+				client.sendMessage(from, ct, image, {caption: 'Nih kak sudah selesai,oiya kakak jangan lupa sarapan ya.dan jangan lupa ibadah', quoted: mek})
 				await limitAdd(sender)
 				break
 		case 'hartatata':
@@ -708,7 +716,7 @@ client.on('group-participants-update', async (anu) => {
 				bh = body.slice(11)
 				reply(ind.wait())
 				bh = await getBuffer(`https://api.zeks.xyz/api/hartatahta?text=${bh}&apikey=apivinz`)
-				client.sendMessage(from, bh, image, {caption: 'Nih kak udah jadi..', quoted: mek})
+				client.sendMessage(from, bh, image, {caption: 'Nih kak sudah selesai,oiya kakak jangan lupa sarapan ya.dan jangan lupa ibadah', quoted: mek})
 				await limitAdd(sender)
 				break
 		case 'nekonime':
@@ -964,7 +972,7 @@ client.on('group-participants-update', async (anu) => {
 				aruga = body.slice(7)
 				reply(ind.wait())
 				aruga = await getBuffer(`https://arugaz.my.id/api/textpro/bloodtext?text=${aruga}`)
-				client.sendMessage(from, aruga, image, {caption: 'Nih kak', quoted: mek})
+				client.sendMessage(from, aruga, image, {caption: 'Nih kak sudah selesai,oiya kakak jangan lupa sarapan ya.dan jangan lupa ibadah', quoted: mek})
 				await limitAdd(sender)
 				break
 		case 'firework':
@@ -974,7 +982,7 @@ client.on('group-participants-update', async (anu) => {
 				arugazzz = body.slice(10)
 				reply(ind.wait())
 				arugazzz = await getBuffer(`https://arugaz.my.id/api/textpro/firework?text=${arugazzz}`)
-				client.sendMessage(from, arugazzz, image, {caption: 'Nih kak', quoted: mek})
+				client.sendMessage(from, arugazzz, image, {caption: 'Nih kak sudah selesai,oiya kakak jangan lupa sarapan ya.dan jangan lupa ibadah', quoted: mek})
 				await limitAdd(sender)
 				break
 		case 'lava':
@@ -995,7 +1003,7 @@ client.on('group-participants-update', async (anu) => {
 					    if (!isNsfw) return reply(ind.nsfwoff())
 						res = await fetchJson(`https://st4rz.herokuapp.com/api/1cak`, {method: 'get'})
 						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni anjim'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni anjim awoakowkwoakwo owner ganteng tq'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply(ind.wrongf())
@@ -1167,7 +1175,7 @@ client.on('group-participants-update', async (anu) => {
 					n = JSON.parse(JSON.stringify(data));
 					nimek =  n[Math.floor(Math.random() * n.length)];
 					pok = await getBuffer(nimek)
-					client.sendMessage(from, pok, image, { quoted: mek, caption: `*PINTEREST*`})
+					client.sendMessage(from, pok, image, { quoted: mek, caption: `*PINTEREST*Nih kak sudah selesai,oiya kakak jangan lupa sarapan ya.dan jangan lupa ibadah`})
 					await limitAdd(sender)
 					break 
 		case 'lirik':
@@ -1445,14 +1453,14 @@ client.on('group-participants-update', async (anu) => {
 		case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*INFO OWNER*\n*Owner bot* : Muhammad Ridwan Reynaldy\n*No Owner* : wa.me/62895330379186\n*Ig owner* : www.instagram.com/anemio999\n━━━━━━━━━━━━━━━━━━━━\n*INFO BOT*\n*Nama bot* : ${me.name}\n*Nomor bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total block contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}\n*Fans page FB* : https://www.facebook.com/ainneboot\n*Ketik* : ${prefix}lpr _Untuk melaporkan admin bot melalui bot_\n*Ketik* : ${prefix}owner untuk menghubungi admin bot kami.`
+					teks = `*INFO OWNER*\n*Owner bot* : Putra Elf Narnia\n*No Owner* : wa.me/6281253534285\n*Ig owner* : www.instagram.com/putraelf\n━━━━━━━━━━━━━━━━━━━━\n*INFO BOT*\n*Nama bot* : ${me.name}\n*Nomor bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total block contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}\n*Fans page FB* : https://www.facebook.com/Putra Elf\n*Ketik* : ${prefix}lpr _Untuk melaporkan admin bot melalui bot_\n*Ketik* : ${prefix}owner untuk menghubungi admin bot kami.`
 					buffer = await getBuffer(`https://i.ibb.co/4jknX6w/pp.jpg`)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
 		case 'snk':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Syarat & Ketentuan Ainebot*\n1. Teks dan nama pengguna WhatsApp anda kami simpan di dalam server selama bot aktif.\n2. Data anda akan di hapus ketika bot offline.\n3. Kami tidak menyimpan gambar, video, file, audio, dan dokumen yang anda kirim.\n4. Kami tidak pernah meminta anda untuk memberikan informasi pribadi.\n5. Jika menemukan Bug/Error silahkan langsung lapor ke Owner bot.\n6. Cukup perintah 1x jika bot tidak merespon harap ulangi kembali, Jika di ulangi kembali tidak merespon, Bot tidak aktif\n7. Dilarang spam, Share virus virtex, Telpon, Video call, Kami akan blockir anda.\n8. Apapun yang anda perintah pada bot ini, *KAMI TIDAK BERTANGGUNG JAWAB!*\n\nTERIMA KASIH !~`
+					teks = `*Syarat & Ketentuan PutraBot*\n1. Teks dan nama pengguna WhatsApp anda kami simpan di dalam server selama bot aktif.\n2. Data anda akan di hapus ketika bot offline.\n3. Kami tidak menyimpan gambar, video, file, audio, dan dokumen yang anda kirim.\n4. Kami tidak pernah meminta anda untuk memberikan informasi pribadi.\n5. Jika menemukan Bug/Error silahkan langsung lapor ke Owner bot.\n6. Cukup perintah 1x jika bot tidak merespon harap ulangi kembali, Jika di ulangi kembali tidak merespon, Bot tidak aktif\n7. Dilarang spam, Share virus virtex, Telpon, Video call, Kami akan blockir anda.\n8. Apapun yang anda perintah pada bot ini, *KAMI TIDAK BERTANGGUNG JAWAB!*\n\nTERIMA KASIH !~`
 					buffer = await getBuffer(`https://i.ibb.co/4jknX6w/pp.jpg`)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -1465,8 +1473,8 @@ client.on('group-participants-update', async (anu) => {
 					text: teks1,
 					contextInfo: {mentionedJid: [nomor]},
 					}
-					client.sendMessage('62895330379186@s.whatsapp.net', options, text, {quoted: mek})
-					reply('Masalah telah di laporkan ke owner AINEBOT, Laporan palsu atau main² tidak akan ditanggapi.')
+					client.sendMessage('6281253534285@s.whatsapp.net', options, text, {quoted: mek})
+					reply('Masalah telah di laporkan ke owner PUTRABOT, Laporan palsu atau main² tidak akan ditanggapi.')
 					break
 		case 'request':
 					const cfrr = body.slice(8)
@@ -1477,8 +1485,8 @@ client.on('group-participants-update', async (anu) => {
 							text: ress,
                          				contextInfo: {mentionedJid: [nomor]},
                      			}
-					client.sendMessage('62895330379186@s.whatsapp.net', options, text, {quoted: mek})
-					client.sendMessage('6285156459328@s.whatsapp.net', options, text, {quoted: mek})
+					client.sendMessage('6281253534285@s.whatsapp.net', options, text, {quoted: mek})
+					client.sendMessage('6281253534285@s.whatsapp.net', options, text, {quoted: mek})
 					reply('REQUEST ANDA TELAH SAMPAI KE OWNER AINEBOT, Requests palsu atau main² tidak akan ditanggapi.')
 					break
 		case 'blocklist': 
@@ -2136,8 +2144,14 @@ client.on('group-participants-update', async (anu) => {
 				client.sendMessage(from, yeh, text, {quoted: mek})
 				await limitAdd(sender)
 				break
-		case 'gcainebot':
-					client.sendMessage(from, 'https://chat.whatsapp.com/HlIbSDEOseg9iUBvEBrtq0',MessageType.text, { quoted: mek} )
+		case 'gctoxicrelationship':
+					client.sendMessage(from, 'https://chat.whatsapp.com/FaxM6du5qn1CSBg3fmxJ7j',MessageType.text, { quoted: mek} )
+					break
+		case 'gcGoodvibes':
+					client.sendMessage(from, 'https://chat.whatsapp.com/Dokt1SpiyfnDgWKNH2ACjF',MessageType.text, { quoted: mek} )
+					break
+		case 'gcmybotputra':
+					client.sendMessage(from, 'https://chat.whatsapp.com/I0ASKkgD7hg9sOS4kc2kho',MessageType.text, { quoted: mek} )
 					break
 		case 'bot':
 					client.sendMessage(from, 'Iya kak? \nJangan lupa daftar iya kak ^_^"\nJika sudah silahkan berarti sudah terdaftar kak ^_^"',MessageType.text, { quoted: mek} )
