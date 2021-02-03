@@ -501,7 +501,7 @@ client.on('group-participants-update', async (anu) => {
 				hasiltf = jumblah - fee
 				addKoinUser(tujuantf, hasiltf)
 				confirmATM(sender, jumblah)
-				addKoinUser('62895330379186@s.whatsapp.net', fee)
+				addKoinUser('62812535342856@s.whatsapp.net', fee)
 				reply(`*「 SUKSES 」*\n\nPengiriman uang telah sukses\nDari : +${sender.split("@")[0]}\nKe : +${tujuan}\nJumlah transfer : ${jumblah}\npajak : ${fee}`)
 				break
 		case 'dompet':
@@ -512,7 +512,7 @@ client.on('group-participants-update', async (anu) => {
 		case 'buylimit':
 				if (!isRegistered) return reply(ind.noregis())
 				payout = body.slice(10)
-				const koinPerlimit = 1000
+				const koinPerlimit = 1890
 				const total = koinPerlimit * payout
 				if ( checkATMuser(sender) <= total) return reply(`Maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
 				if ( checkATMuser(sender) >= total ) {
